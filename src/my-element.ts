@@ -1,8 +1,7 @@
 import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import litLogo from './assets/lit.svg'
-import viteLogo from '/vite.svg'
-
+import './components/about'
 /**
  * An example element.
  *
@@ -26,25 +25,15 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
         <a href="https://lit.dev" target="_blank">
           <img src=${litLogo} class="logo lit" alt="Lit logo" />
         </a>
       </div>
       <slot></slot>
       <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
+        <about-card caption="This is my demo"></about-card>
       </div>
-      <p class="read-the-docs">${this.docsHint}</p>
     `
-  }
-
-  private _onClick() {
-    this.count++
   }
 
   static styles = css`
@@ -70,10 +59,6 @@ export class MyElement extends LitElement {
 
     .card {
       padding: 2em;
-    }
-
-    .read-the-docs {
-      color: #888;
     }
 
     ::slotted(h1) {
@@ -107,15 +92,6 @@ export class MyElement extends LitElement {
     button:focus,
     button:focus-visible {
       outline: 4px auto -webkit-focus-ring-color;
-    }
-
-    @media (prefers-color-scheme: light) {
-      a:hover {
-        color: #747bff;
-      }
-      button {
-        background-color: #f9f9f9;
-      }
     }
   `
 }
