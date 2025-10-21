@@ -2,6 +2,7 @@ import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import litLogo from './assets/lit.svg'
 import './components/about'
+import './components/button'
 /**
  * An example element.
  *
@@ -25,11 +26,39 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
+        <a
+          href="https://lit.dev"
+          target="_blank"
+        >
+          <img
+            src=${litLogo}
+            class="logo lit"
+            alt="Lit logo"
+          />
         </a>
       </div>
-      <slot></slot>
+      <lw-button
+        type="primary"
+        size="small"
+        .loading=${true}
+        >loading</lw-button
+      >
+      <lw-button
+        type="success"
+        size="small"
+        text="save"
+      ></lw-button>
+      <lw-button
+        type="info"
+        size="medium"
+        disabled
+        text="disabled"
+      ></lw-button>
+      <lw-button
+        type="warning"
+        size="large"
+        text="warning"
+      ></lw-button>
       <div class="card">
         <about-card caption="This is my demo"></about-card>
       </div>

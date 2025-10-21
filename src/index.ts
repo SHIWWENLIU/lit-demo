@@ -1,2 +1,3 @@
-export * from './components/about';
-export * from './my-element';
+export * from './components/about'
+export * from './components/button'
+export * from './my-element'
