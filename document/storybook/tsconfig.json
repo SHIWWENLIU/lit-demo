@@ -1,0 +1,7 @@
+{
+  "extends": "../../packages/lit-demo/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src", ".storybook"]
+}

@@ -1,2 +1,4 @@
 dist/
+packages/*/dist/
+document/*/dist/
 node_modules/

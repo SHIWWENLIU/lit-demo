@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/lerna-package.json",
+  "version": "independent",
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*",
+    "document/*"
+  ]
+}

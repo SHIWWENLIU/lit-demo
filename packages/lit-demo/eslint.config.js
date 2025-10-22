@@ -1,6 +1,6 @@
 import js from '@eslint/js'
 import { defineConfig } from 'eslint/config'
-import pluginLit from "eslint-plugin-lit";
+import pluginLit from 'eslint-plugin-lit'
 import tseslint from 'typescript-eslint'
 
 export default defineConfig([
@@ -18,5 +18,5 @@ export default defineConfig([
     extends: ['js/recommended'],
   },
   tseslint.configs.recommended,
-  pluginLit.configs["flat/recommended"],
+  pluginLit.configs['flat/recommended'],
 ])

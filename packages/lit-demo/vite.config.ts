@@ -1,8 +1,8 @@
-import { resolve } from 'node:path';
-import { defineConfig } from 'vite';
+import { resolve } from 'node:path'
+import { defineConfig } from 'vite'
 
 export default defineConfig(({ command }) => {
-  const isBuild = command === 'build';
+  const isBuild = command === 'build'
 
   return {
     build: isBuild
@@ -18,5 +18,5 @@ export default defineConfig(({ command }) => {
           },
         }
       : undefined,
-  };
-});
+  }
+})

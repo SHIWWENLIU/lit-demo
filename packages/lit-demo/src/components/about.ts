@@ -1,5 +1,5 @@
-import { css, html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { css, html, LitElement } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('about-card')
 export class About extends LitElement {
@@ -32,10 +32,10 @@ export class About extends LitElement {
       line-height: 1.6;
       font-size: 0.95rem;
     }
-  `;
+  `
 
   @property({ type: String })
-  caption = 'Default value';
+  caption = 'Default value'
 
   render() {
     return html`
@@ -43,12 +43,12 @@ export class About extends LitElement {
         <h2>About</h2>
         <p>${this.caption}</p>
       </article>
-    `;
+    `
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'about-card': About;
+    'about-card': About
   }
 }
