@@ -16,6 +16,8 @@
     "storybook:build": "pnpm --filter storybook build"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "husky": "^9.1.7",
     "lerna": "^7.4.2"
   },
