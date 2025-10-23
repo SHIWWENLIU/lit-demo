@@ -21,7 +21,7 @@
     "build:lib": "vite build",
     "build:types": "tsc -p tsconfig.build.json",
     "preview": "vite preview",
-    "lint": "eslint . --ext .ts,.js",
+    "lint": "eslint . --ext .ts,.tsx,.js",
     "lint:fix": "pnpm run lint -- --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -50,7 +50,7 @@
     "access": "public"
   },
   "lint-staged": {
-    "*.{ts,js}": [
+    "*.{ts,tsx,js}": [
       "pnpm exec eslint --fix",
       "pnpm exec prettier --write"
     ],
