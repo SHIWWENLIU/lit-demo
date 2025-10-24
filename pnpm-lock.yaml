@@ -20,6 +20,9 @@ importers:
       lerna:
         specifier: ^7.4.2
         version: 7.4.2(@swc/core@1.5.7)(@types/node@24.9.1)(encoding@0.1.13)
+      typescript:
+        specifier: ~5.9.3
+        version: 5.9.3
 
   document/storybook:
     dependencies:

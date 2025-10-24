@@ -1,30 +1,32 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import prettier from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'eslint/config'
+import js from '@eslint/js'
+import globals from 'globals'
+import prettier from 'eslint-config-prettier'
+import tseslint from 'typescript-eslint'
 
-export default [
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
+export default defineConfig([
   {
-    ignores: ['dist', 'storybook-static'],
+    ignores: ['dist', 'storybook-static', 'eslint.config.js'],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   {
-    files: ['**/*.{ts,tsx,js}'],
     languageOptions: {
-      parser: tseslint.parser,
       parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
+        project: true,
+        tsconfigRootDir: __dirname,
       },
       globals: {
         ...globals.browser,
         ...globals.es2021,
       },
     },
-    plugins: {
-      '@typescript-eslint': tseslint.plugin,
+    rules: {
+      '@typescript-eslint/unbound-method': 'off',
     },
   },
   prettier,
-];
+])
